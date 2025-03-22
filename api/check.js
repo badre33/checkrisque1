@@ -1,6 +1,6 @@
-import axios from 'axios';
+const axios = require('axios');
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   const { q } = req.query;
   if (!q) return res.status(400).json({ error: 'Missing query' });
 
@@ -28,4 +28,4 @@ export default async function handler(req, res) {
     console.error('API Proxy error:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
-}
+};
