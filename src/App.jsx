@@ -22,7 +22,7 @@ const handleSearch = async () => {
 
     setResults(categories);
   } catch (err) {
-    console.error(err);
+    console.error('Erreur appel OpenSanctions:', err);
     setResults(null);
   }
   setLoading(false);
